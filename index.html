@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boat Route Optimization</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+
+<header>
+<h1>Optimal Boat Route Using Calculus</h1>
+<p>Finding the fastest path between running and boating using derivatives</p>
+</header>
+
+<nav>
+<a href="#scenario">Scenario</a>
+<a href="#model">Mathematical Model</a>
+<a href="#calculation">Calculations</a>
+<a href="#video">Animation</a>
+</nav>
+
+<section id="scenario">
+<h2>The Scenario</h2>
+
+<p>
+A student must travel from a beach house to an offshore research station.
+The student can run along the beach at <b>9 mph</b> and then take a boat
+toward the station at <b>4 mph</b>.
+</p>
+
+<p>
+The station is located <b>3 miles offshore</b> and the student starts
+<b>10 miles away from the closest point to the station</b>.
+</p>
+
+<p>
+The goal is to determine how far the student should run before switching
+to the boat in order to minimize total travel time.
+</p>
+
+</section>
+
+<section id="model">
+
+<h2>Mathematical Model</h2>
+
+<p>
+Let <b>x</b> represent the distance (in miles) the student runs along the beach.
+</p>
+
+<p>
+The running time is:
+</p>
+
+<section id="calculation">
+
+<h2>Optimization Using Derivatives</h2>
+
+<p>
+To minimize the total travel time, we differentiate the time function and set the derivative equal to zero. 
+This allows us to find the critical point where the travel time is minimized.
+</p>
+
+<div class="step">
+
+<h3>Step 1: Set the derivative equal to zero</h3>
+
+<p>
+The derivative of the time function is set equal to zero to locate the critical point.
+</p>
+
+<div class="math">
+\[
+\frac{1}{9} = \frac{10-x}{4\sqrt{(10-x)^2 + 9}}
+\]
+</div>
+
+</div>
+
+
+<div class="step">
+
+<h3>Step 2: Eliminate the denominator</h3>
+
+<p>
+Multiply both sides by \(4\sqrt{(10-x)^2 + 9}\) to remove the denominator.
+</p>
+
+<div class="math">
+\[
+4\sqrt{(10-x)^2 + 9} = 9(10-x)
+\]
+</div>
+
+</div>
+
+
+<div class="step">
+
+<h3>Step 3: Square both sides</h3>
+
+<p>
+Squaring both sides removes the square root and simplifies the equation.
+</p>
+
+<div class="math">
+\[
+16((10-x)^2 + 9) = 81(10-x)^2
+\]
+</div>
+
+</div>
+
+
+<div class="step">
+
+<h3>Step 4: Simplify the equation</h3>
+
+<p>
+Expanding and simplifying the equation gives the following result.
+</p>
+
+<div class="math">
+\[
+144 = 65(10-x)^2
+\]
+</div>
+
+</div>
+
+
+<div class="step">
+
+<h3>Step 5: Solve for x</h3>
+
+<p>
+Solving the equation for \(x\) gives the critical point.
+</p>
+
+<div class="math">
+\[
+x = 10 - \frac{12}{\sqrt{65}}
+\]
+</div>
+
+</div>
+
+
+<div class="step">
+
+<h3>Step 6: Approximate the value</h3>
+
+<p>
+Evaluating the expression numerically gives the optimal running distance.
+</p>
+
+<div class="math highlight">
+\[
+x \approx 8.51
+\]
+</div>
+
+<p>
+Therefore, the student should run approximately <b>8.51 miles</b> before taking the boat in order to minimize the total travel time.
+</p>
+
+</div>
+
+</section>
+
+<p>
+This means the student should run approximately
+<b>8.51 miles</b> before taking the boat to achieve the fastest route.
+</p>
+
+</section>
+
+<section id="video">
+
+<h2>Manim Visualization</h2>
+
+<p>
+The animation below visualizes the optimization process,
+including the function, derivative, and optimal solution.
+</p>
+
+<div class="video-container">
+<video controls>
+<source src="media/videos/calc/1080p60/OptimalSolution.mp4" type="video/mp4">
+</video>
+</div>
+
+</section>
+
+<footer>
+
+<p>Calculus Optimization Project</p>
+<p>Using Derivatives to Minimize Travel Time</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
